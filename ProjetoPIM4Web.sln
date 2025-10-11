@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoPIM4Web", "ProjetoPIM4Web.csproj", "{740F1A24-9CEA-40B6-BE0E-8A04B06A7180}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{740F1A24-9CEA-40B6-BE0E-8A04B06A7180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{740F1A24-9CEA-40B6-BE0E-8A04B06A7180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{740F1A24-9CEA-40B6-BE0E-8A04B06A7180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{740F1A24-9CEA-40B6-BE0E-8A04B06A7180}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2662C74-DB5B-4878-A90E-FFF9793309DB}
+	EndGlobalSection
+EndGlobal
