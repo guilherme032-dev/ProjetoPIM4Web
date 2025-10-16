@@ -1,48 +1,6 @@
-@model IEnumerable<ProjetoPIM4Web.Models.Users>
-
-@{
-    ViewData["Title"] = "Política de Privacidade";
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use esta página para detalhar a política de privacidade do seu site.</p>
-
-<h2>Usuários Registrados</h2>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Fullname)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EnterpriseId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PhoneNumber)
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Fullname)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EnterpriseId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PhoneNumber)
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<p>Use this page to detail your site's privacy policy.</p>

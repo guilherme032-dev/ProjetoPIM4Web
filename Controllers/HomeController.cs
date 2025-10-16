@@ -2,39 +2,27 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProjetoPIM4Web.Models;
-using ProjetoPIM4Web.Data;
-using Microsoft.EntityFrameworkCore;
-using ProjetoPIM4.Models;
-using Microsoft.AspNetCore.Identity;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ProjetoPIM4Web.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly AppDbContext _context;
-        private readonly UserManager<Users> _userManager;
 
-        public HomeController(ILogger<HomeController> logger, AppDbContext context, UserManager<Users> userManager)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _context = context;
-            _userManager = userManager;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var activeServices = await _context.ProductServices.Where(ps => ps.IsActive).ToListAsync();
-            return View(activeServices);
+            return View();
         }
 
         [Authorize]
-        public async Task<IActionResult> Privacy()
+        public IActionResult Privacy()
         {
-            var users = await _userManager.Users.ToListAsync();
-            return View(users);
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -44,4 +32,3 @@ namespace ProjetoPIM4Web.Controllers
         }
     }
 }
-
