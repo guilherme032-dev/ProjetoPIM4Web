@@ -33,15 +33,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.ProductService.Name)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AiClassification)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AiSuggestedSolution)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AiTechnicianRecommendation)
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -69,15 +60,6 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.ProductService.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AiClassification)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AiSuggestedSolution)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AiTechnicianRecommendation)
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
