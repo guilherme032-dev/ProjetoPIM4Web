@@ -1,0 +1,91 @@
+@model IEnumerable<ProjetoPIM4.Models.Call>
+
+@{
+    ViewData["Title"] = "Gerenciar Chamados";
+}
+
+<h1>Gerenciar Chamados</h1>
+
+<p>
+    <a asp-action="Create">Abrir Novo Chamado</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OpenedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Priority)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.User.Fullname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductService.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AiClassification)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AiSuggestedSolution)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AiTechnicianRecommendation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OpenedDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Priority)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.Fullname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductService.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AiClassification)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AiSuggestedSolution)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AiTechnicianRecommendation)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
